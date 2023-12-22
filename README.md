@@ -1,8 +1,9 @@
 # UltiloTaller-EstructuraDeDatos Brayan Cortes Borquez 21.158.901-9
--- Comando  
+-- Comando g++ main.cpp -o main , ./main
 
 Explicacion: 
-El algoritmo de Bellman-Ford te sirve para encontrar el camino más corto entre un punto de partida y todos los demás puntos en el grafo. Así es como funciona:
-Primero:
-Se ponen las distancias y los padres de cada punto en el grafo, todas las distancias son infinitas, menos la del punto de partida, que es 0. El algoritmo repite n-1 veces, donde n es el número de puntos en el grafo, asi se van revisando todas las conexiones en el
-grafo hasta encontrar la mas adecuada.
+El algoritmo de Bellman-Ford te sirve para encontrar el camino más corto entre un punto de partida y todos los demás puntos en el grafo:
+- Primero, se inicializan las distancias a todos los nodos desde el nodo de origen como infinito y los padres como -1. Esto significa que no sabemos cuánto cuesta llegar a cada nodo desde el origen, ni qué nodo viene antes en el camino más corto.
+- Luego, se establece la distancia al nodo de origen en 0.
+- Se verifica si la distancia hasta el destino a través del nodo actual es menor que la distancia actual almacenada en distancias[conexion.idDestino]. Si es así, se actualiza la distancia y se guarda el nuevo nodo como el padre.
+- Al final, el mapa distancias tendrá las distancias más cortas desde el nodo de origen hasta todos los demás nodos, y el mapa padres tendrá los predecesores en el camino más corto.
